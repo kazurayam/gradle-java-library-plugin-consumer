@@ -22,6 +22,15 @@ jobs:
           distribution: 'adopt'
           architecture: x64
 
+      - name: Restore gradle.properties
+        env:
+          GRADLE_PROPERTIES: ${{ secrets.GRADLE_PROPERTIES }}
+        shell: bash
+        run: |
+          mkdir -p ~/.gradle/
+          echo "::set-env name=GRADLE_USER_HOME::$HOME/.gradle"
+          echo ${GRADLE_PROPERTIES} > ~/.gradle/gradle.properties
+
       - name: Validate Gradle wrapper
         uses: gradle/wrapper-validation-action@v1
 
