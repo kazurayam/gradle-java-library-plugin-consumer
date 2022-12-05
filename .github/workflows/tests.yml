@@ -25,13 +25,7 @@ jobs:
       - name: Validate Gradle wrapper
         uses: gradle/wrapper-validation-action@v1
 
-      - name: Build with Gradle
-        uses: gradle/gradle-build-action@v2
-        with:
-          gradle-version: 7.4.2
-          arguments: :build
-
       - name: Run the Gradle test task
         uses: gradle/gradle-build-action@v2
         with:
-          arguments: :test -Pgpr.user=kazurayam -Pgpr.key=$${{ secrets.GITHUB_TOKEN }}
+          arguments: :test
