@@ -29,6 +29,9 @@ jobs:
         run: |
           mkdir -p ~/.gradle/
           echo ${GRADLE_PROPERTIES} > ~/.gradle/gradle.properties
+
+      - shell: bash
+        run: |
           cat ~/.gradle/gradle.properties
 
       - name: Validate Gradle wrapper
