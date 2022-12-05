@@ -34,4 +34,4 @@ jobs:
       - name: Run the Gradle test task
         uses: gradle/gradle-build-action@v2
         with:
-          arguments: :test
+          arguments: :test -Pgpr.user=kazurayam -Pgpr.key=$${{ secrets.GITHUB_TOKEN }}
