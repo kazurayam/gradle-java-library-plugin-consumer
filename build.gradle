@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'com.tomgregory'
-version '0.2.0'
+version '0.2.1'
 
 sourceCompatibility = 1.8
 
@@ -18,10 +18,6 @@ repositories {
     }
     mavenLocal()
 }
-
-println "project.findProperty(\"gpr.user\")=" + project.findProperty("gpr.user")
-println "project.findProperty(\"gpr.key\")=" + project.findProperty("gpr.key")
-
 
 dependencies {
     implementation group: 'com.tomgregory', name: 'gradle-java-library-plugin-library', version: '0.2.0'
