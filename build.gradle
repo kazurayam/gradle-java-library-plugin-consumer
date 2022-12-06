@@ -3,15 +3,22 @@ plugins {
 }
 
 group 'com.tomgregory'
-version '1.0-SNAPSHOT'
+version '0.2.1'
 
 sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    maven {
+        url = uri("https://maven.pkg.github.com/kazurayam/gradle-java-library-plugin-library")
+        credentials {
+            username = project.findProperty("gpr.user")
+            password = project.findProperty("gpr.key")
+        }
+    }
     mavenLocal()
 }
 
 dependencies {
-    implementation group: 'com.tomgregory', name: 'gradle-java-library-plugin-library', version: '0.0.1-SNAPSHOT'
+    implementation group: 'com.tomgregory', name: 'gradle-java-library-plugin-library', version: '0.2.0'
 }
