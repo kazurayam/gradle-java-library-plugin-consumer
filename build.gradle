@@ -20,5 +20,5 @@ repositories {
 }
 
 dependencies {
-    implementation group: 'com.tomgregory', name: 'gradle-java-library-plugin-library', version: '0.0.1'
+    implementation group: 'com.tomgregory', name: 'gradle-java-library-plugin-library', version: '0.2.0'
 }
