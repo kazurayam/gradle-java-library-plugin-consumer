@@ -24,11 +24,11 @@ jobs:
 
       - name: Restore gradle.properties
         env:
-          GRADLE_PROPERTIES: ${{ secrets.GRADLE_PROPERTIES }}
+          GP: ${{ secrets.GRADLE_PROPERTIES }}
         shell: bash
         run: |
           mkdir -p ~/.gradle/
-          echo "${GRADLE_PROPERTIES}" > ~/.gradle/gradle.properties
+          echo "${GP}" > ~/.gradle/gradle.properties
 
       - name: Validate Gradle wrapper
         uses: gradle/wrapper-validation-action@v1
